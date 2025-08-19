@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighthouse AI | The Control Plane for Enterprise AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #E2E8F0; /* slate-200 */
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .code-block {
+            background-color: #1E293B; /* slate-800 */
+            border: 1px solid #334155; /* slate-700 */
+            border-radius: 0.5rem;
+            padding: 1rem;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background-color: #334155; /* slate-700 */
+            color: #94A3B8; /* slate-400 */
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+        }
+        .copy-btn:hover {
+            background-color: #475569; /* slate-600 */
+            color: #E2E8F0; /* slate-200 */
+        }
+        .feature-card {
+            background-color: #1E293B;
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #818cf8;
+        }
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 40%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="py-4 px-4 sm:px-6 lg:px-8 border-b border-slate-800 sticky top-0 bg-black/50 backdrop-blur-sm z-10">
+        <nav class="flex justify-between items-center max-w-6xl mx-auto">
+            <a href="#" class="text-xl font-bold gradient-text">Lighthouse AI</a>
+            <div class="flex items-center space-x-6">
+                <a href="#platform" class="text-slate-400 hover:text-indigo-400 transition">Platform</a>
+                <a href="#l8e-beam" class="text-slate-400 hover:text-indigo-400 transition">l8e-beam SDK</a>
+                <a href="https://github.com/l8eAI/l8e_beam" target="_blank" class="text-slate-400 hover:text-indigo-400 transition">GitHub</a>
+                <a href="#waitlist-form" target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition">Join the Waitlist</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Hero Section -->
+        <section class="relative text-center py-20 sm:py-32">
+            <div class="hero-bg"></div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-50">
+                The Control Plane for <span class="gradient-text">Enterprise AI</span>.
+            </h1>
+            <p class="mt-6 max-w-3xl mx-auto text-lg text-slate-400">
+                Lighthouse is a comprehensive AI Governance Platform that provides the security, compliance, and operational tools you need to build and deploy AI applications with confidence.
+            </p>
+            <div class="mt-10 flex justify-center items-center space-x-4">
+                 <a href="#l8e-beam" class="bg-white text-slate-900 px-6 py-3 rounded-md font-bold hover:bg-slate-200 transition">
+                    Start with our OSS SDK
+                </a>
+                 <a href="#waitlist-form" target="_blank" class="text-slate-300 px-6 py-3 rounded-md font-semibold hover:text-white transition flex items-center space-x-2">
+                    <span>Join the Waitlist</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Platform Features Section -->
+        <section id="platform" class="py-20 sm:py-24">
+            <div class="text-center">
+                <p class="font-semibold text-indigo-400">The Lighthouse Platform</p>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-slate-50">One Platform to Govern Your Entire AI Lifecycle.</h2>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Security -->
+                <div class="feature-card">
+                    <h3 class="font-bold text-lg text-slate-50">🔐 Security</h3>
+                    <ul class="mt-4 space-y-2 text-slate-400">
+                        <li>LLM Firewall & Prompt Gateway</li>
+                        <li>PII & Sensitive Data Detection</li>
+                        <li>Role-Based Access Control (RBAC)</li>
+                        <li>Immutable Audit Logging</li>
+                    </ul>
+                </div>
+                <!-- Operational Governance -->
+                <div class="feature-card">
+                    <h3 class="font-bold text-lg text-slate-50">⚙️ Operational Governance</h3>
+                    <ul class="mt-4 space-y-2 text-slate-400">
+                        <li>LLM Routing & Abstraction</li>
+                        <li>Cost & Quota Management</li>
+                        <li>Prompt Versioning & CI/CD</li>
+                        <li>Policy-as-Code Engine</li>
+                    </ul>
+                </div>
+                <!-- Monitoring -->
+                <div class="feature-card">
+                    <h3 class="font-bold text-lg text-slate-50">🔎 Monitoring & Observability</h3>
+                    <ul class="mt-4 space-y-2 text-slate-400">
+                        <li>Real-time Prompt Inspection</li>
+                        <li>Model Performance Tracking</li>
+                        <li>Data Lineage & Provenance</li>
+                        <li>Abuse & Misuse Alerting</li>
+                    </ul>
+                </div>
+                <!-- Compliance -->
+                <div class="feature-card">
+                    <h3 class="font-bold text-lg text-slate-50">🛡️ Compliance</h3>
+                    <ul class="mt-4 space-y-2 text-slate-400">
+                        <li>GDPR, HIPAA, SOC 2 Controls</li>
+                        <li>Data Residency & Sovereignty</li>
+                        <li>Automated Retention Policies</li>
+                        <li>Data Subject Request (DSR) Workflows</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- l8e-beam SDK Section -->
+        <section id="l8e-beam" class="py-20 sm:py-24 bg-slate-900/50 border-y border-slate-800 rounded-2xl">
+            <div class="text-center">
+                <p class="font-semibold text-sky-400">Free & Open Source</p>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-slate-50">Start Building Today with `l8e-beam`.</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">
+                    `l8e-beam` is our foundational Python SDK for PII sanitization. It's the perfect entry point to building secure AI applications on the Lighthouse platform.
+                </p>
+            </div>
+            <div class="mt-10 max-w-md mx-auto">
+                <div class="code-block text-left">
+                    <pre><code class="font-mono text-sky-300">$ pip install l8e-beam</code></pre>
+                    <button class="copy-btn" onclick="copyToClipboard('$ pip install l8e-beam', this)">Copy</button>
+                </div>
+            </div>
+            
+            <!-- Interactive Demo -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <div class="flex border-b border-slate-700 mb-8">
+                    <button id="tab-decorator" class="tab-btn active text-lg font-semibold py-3 px-6 border-b-2 border-transparent" onclick="switchTab('decorator')">
+                        Simple Usage: Decorator
+                    </button>
+                    <button id="tab-api" class="tab-btn text-lg font-semibold py-3 px-6 border-b-2 border-transparent text-slate-400" onclick="switchTab('api')">
+                        Advanced Usage: API
+                    </button>
+                </div>
+                <div id="content-decorator" class="grid md:grid-cols-2 gap-6 items-start">
+                     <div>
+                        <p class="text-slate-400 mb-4">For "set-and-forget" protection, just add the decorator to any function.</p>
+                        <div class="code-block text-sm">
+                            <button class="copy-btn" onclick="copyToClipboard(this.nextElementSibling.innerText, this)">Copy</button>
+                            <pre><code class="font-mono whitespace-pre-wrap"><span class="text-purple-400">from</span> l8e_beam <span class="text-purple-400">import</span> redact_pii, PiiAction
+
+<span class="text-purple-400">@redact_pii</span>(action=PiiAction.ANONYMIZE)
+<span class="text-purple-400">def</span> <span class="text-sky-300">create_test_user</span>(profile: <span class="text-green-400">dict</span>):
+    <span class="text-purple-400">return</span> profile
+
+user_profile = {
+    <span class="text-green-400">"name"</span>: <span class="text-yellow-300">"John Doe"</span>, 
+    <span class="text-green-400">"email"</span>: <span class="text-yellow-300">"john.doe@example.com"</span>
+}
+anonymized = create_test_user(user_profile)</code></pre>
+                        </div>
+                    </div>
+                    <div>
+                         <p class="text-slate-400 mb-4">The decorator automatically processes inputs and outputs.</p>
+                         <div class="code-block text-sm">
+                             <pre><code class="font-mono whitespace-pre-wrap"><span class="text-slate-500">// Output</span>
+{
+  <span class="text-green-400">"name"</span>: <span class="text-yellow-300">"Mary Smith"</span>, 
+  <span class="text-green-400">"email"</span>: <span class="text-yellow-300">"robertholmes@example.org"</span>
+}</code></pre>
+                         </div>
+                    </div>
+                </div>
+                <div id="content-api" class="hidden grid md:grid-cols-2 gap-6 items-start">
+                    <div>
+                        <p class="text-slate-400 mb-4">For dynamic processing and full control over the sanitization rules.</p>
+                        <div class="code-block text-sm">
+                            <button class="copy-btn" onclick="copyToClipboard(this.nextElementSibling.innerText, this)">Copy</button>
+                            <pre><code class="font-mono whitespace-pre-wrap"><span class="text-purple-400">from</span> l8e_beam <span class="text-purple-400">import</span> sanitize_pii, DefaultRecognizer
+
+report = <span class="text-yellow-300">"Contact support@acme.com about the issue with John Smith."</span>
+
+<span class="text-slate-500"># Redact names, but leave emails untouched</span>
+processed = sanitize_pii(
+    report,
+    disabled_recognizers=[DefaultRecognizer.EMAIL]
+)</code></pre>
+                        </div>
+                    </div>
+                    <div>
+                         <p class="text-slate-400 mb-4">The API gives you fine-grained control.</p>
+                         <div class="code-block text-sm">
+                             <pre><code class="font-mono whitespace-pre-wrap"><span class="text-slate-500">// Output</span>
+<span class="text-yellow-300">"Contact support@acme.com about the issue with [PERSON]."</span></code></pre>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="text-center py-20 sm:py-32">
+            <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-50">
+                Ready to Govern Your Enterprise AI?
+            </h2>
+             <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-400">
+                Start with our open-source SDK or join the waitlist to get early access to the full Lighthouse AI Governance Platform.
+            </p>
+            <div class="mt-10">
+                 <a href="#waitlist-form" target="_blank" class="bg-indigo-600 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-indigo-700 transition">
+                    Join the Waitlist
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800">
+        <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-slate-400">
+            <p>&copy; 2025 Lighthouse AI</p>
+            <div class="flex space-x-6 mt-4 sm:mt-0">
+                <a href="https://github.com/l8eAI/l8e_beam" target="_blank" class="hover:text-indigo-400 transition">GitHub</a>
+                <a href="#" class="hover:text-indigo-400 transition">Documentation</a>
+                <a href="#" class="hover:text-indigo-400 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard(text, button) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                button.textContent = 'Copied!';
+                setTimeout(() => { button.textContent = 'Copy'; }, 2000);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function switchTab(tabName) {
+            const decoratorTab = document.getElementById('tab-decorator');
+            const apiTab = document.getElementById('tab-api');
+            const decoratorContent = document.getElementById('content-decorator');
+            const apiContent = document.getElementById('content-api');
+
+            if (tabName === 'decorator') {
+                decoratorTab.classList.add('active');
+                decoratorTab.classList.remove('text-slate-400');
+                apiTab.classList.remove('active');
+                apiTab.classList.add('text-slate-400');
+                decoratorContent.classList.remove('hidden');
+                apiContent.classList.add('hidden');
+            } else {
+                apiTab.classList.add('active');
+                apiTab.classList.remove('text-slate-400');
+                decoratorTab.classList.remove('active');
+                decoratorTab.classList.add('text-slate-400');
+                apiContent.classList.remove('hidden');
+                decoratorContent.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
