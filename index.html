@@ -73,11 +73,14 @@
     <header class="py-4 px-4 sm:px-6 lg:px-8 border-b border-slate-800 sticky top-0 bg-black/50 backdrop-blur-sm z-10">
         <nav class="flex justify-between items-center max-w-6xl mx-auto">
             <a href="#" class="text-xl font-bold gradient-text">Lighthouse AI</a>
-            <div class="flex items-center space-x-6">
+            <div class="hidden md:flex items-center space-x-6">
                 <a href="#platform" class="text-slate-400 hover:text-indigo-400 transition">Platform</a>
                 <a href="#l8e-beam" class="text-slate-400 hover:text-indigo-400 transition">l8e-beam 빔</a>
                 <a href="https://github.com/l8eAI/l8e_beam" target="_blank" class="text-slate-400 hover:text-indigo-400 transition">GitHub</a>
                 <button onclick="openModal()" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition animate-pulse hover:animate-none">Join the Waitlist</button>
+            </div>
+            <div class="md:hidden">
+                 <button onclick="openModal()" class="bg-indigo-600 text-white px-3 py-1.5 rounded-md font-semibold hover:bg-indigo-700 transition text-sm">Join Waitlist</button>
             </div>
         </nav>
     </header>
@@ -85,7 +88,7 @@
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Hero Section -->
-        <section class="relative text-center py-20 sm:py-32">
+        <section class="relative text-center py-16 sm:py-24 md:py-32">
             <div class="hero-bg"></div>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-50">
                 The Control Plane for <span class="gradient-text">Enterprise AI</span>.
@@ -93,11 +96,11 @@
             <p class="mt-6 max-w-3xl mx-auto text-lg text-slate-400">
                 Lighthouse is a comprehensive AI Governance Platform that provides the security, compliance, and operational tools you need to build and deploy AI applications with confidence.
             </p>
-            <div class="mt-10 flex justify-center items-center space-x-4">
-                 <a href="#l8e-beam" class="bg-white text-slate-900 px-6 py-3 rounded-md font-bold hover:bg-slate-200 transition">
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                 <a href="#l8e-beam" class="bg-white text-slate-900 px-6 py-3 rounded-md font-bold hover:bg-slate-200 transition w-full sm:w-auto">
                     Start with our OSS SDK
                 </a>
-                 <button onclick="openModal()" class="text-slate-300 px-6 py-3 rounded-md font-semibold hover:text-white transition flex items-center space-x-2">
+                 <button onclick="openModal()" class="text-slate-300 px-6 py-3 rounded-md font-semibold hover:text-white transition flex items-center justify-center space-x-2 w-full sm:w-auto border border-slate-700 hover:border-slate-500">
                     <span>Join the Waitlist</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
@@ -105,14 +108,14 @@
         </section>
 
         <!-- Why Lighthouse Section -->
-        <section id="why" class="py-20 sm:py-24 text-center">
+        <section id="why" class="py-16 sm:py-24 text-center">
              <div class="text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">Why <span class="gradient-text">Lighthouse?</span></h2>
                 <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-400">
                     Navigating the complexities of AI governance can feel like sailing through a thick fog. We named our company Lighthouse (l8e) because we provide the critical guidance and visibility needed to develop AI safely and responsibly.
                 </p>
             </div>
-            <div class="mt-12 max-w-2xl mx-auto bg-slate-900/50 border border-slate-800 rounded-lg p-8">
+            <div class="mt-12 max-w-2xl mx-auto bg-slate-900/50 border border-slate-800 rounded-lg p-6 sm:p-8">
                 <h3 class="font-bold text-xl text-sky-400">Our First Beacon: l8e-beam 빔</h3>
                 <p class="mt-3 text-slate-300">
                     Our first open-source tool, l8e-beam 빔, is the first ray of light from our platform. It's a focused, powerful beam designed to cut through the fog of data privacy, illuminating and sanitizing sensitive information so you can build with a clear path forward.
@@ -121,7 +124,7 @@
         </section>
 
         <!-- Platform Features Section -->
-        <section id="platform" class="py-20 sm:py-24">
+        <section id="platform" class="py-16 sm:py-24">
             <div class="text-center">
                 <p class="font-semibold text-indigo-400">The Lighthouse Platform</p>
                 <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-slate-50">One Platform to Govern Your Entire AI Lifecycle.</h2>
@@ -132,7 +135,7 @@
         </section>
 
         <!-- l8e-beam SDK Section -->
-        <section id="l8e-beam" class="py-20 sm:py-24 bg-slate-900/50 border-y border-slate-800 rounded-2xl">
+        <section id="l8e-beam" class="py-16 sm:py-24 bg-slate-900/50 border-y border-slate-800 rounded-2xl">
             <div class="text-center">
                 <p class="font-semibold text-sky-400">Free & Open Source</p>
                 <h2 class="mt-2 text-3xl sm:text-4xl font-bold text-slate-50">Start Building Today with l8e-beam 빔.</h2>
@@ -143,14 +146,14 @@
             <div class="mt-10 max-w-2xl mx-auto">
                 <div class="code-block text-left">
                     <div class="flex justify-between items-center mb-2">
-                        <span class="font-mono text-sky-300">$ pip install l8e-beam</span>
+                        <span class="font-mono text-sky-300 text-sm sm:text-base">$ pip install l8e-beam</span>
                         <span class="text-xs font-semibold text-yellow-400 bg-yellow-900/50 px-2 py-1 rounded-full">Coming Soon</span>
                     </div>
                     <p class="text-slate-400 text-sm mt-4">While we finalize our PyPI organization validation, you can install the package directly from the source.</p>
                 </div>
                 <div class="mt-4 text-left text-sm text-slate-400">
                     <p class="font-bold mb-2">To install locally:</p>
-                    <ol class="list-decimal list-inside space-y-2 font-mono bg-slate-900/50 p-4 rounded-md">
+                    <ol class="list-decimal list-inside space-y-2 font-mono bg-slate-900/50 p-4 rounded-md text-sm sm:text-base">
                         <li><span class="text-slate-300">git clone https://github.com/l8eAI/l8e_beam.git</span></li>
                         <li><span class="text-slate-300">cd l8e_beam</span></li>
                         <li><span class="text-slate-300">pip install -e .</span></li>
@@ -161,11 +164,11 @@
             <!-- Interactive Demo -->
             <div class="mt-16 max-w-4xl mx-auto">
                 <div class="flex border-b border-slate-700 mb-8">
-                    <button id="tab-decorator" class="tab-btn active text-lg font-semibold py-3 px-6 border-b-2 border-transparent" onclick="switchTab('decorator')">
-                        Simple Usage: Decorator
+                    <button id="tab-decorator" class="tab-btn active text-base sm:text-lg font-semibold py-3 px-4 sm:px-6 border-b-2 border-transparent" onclick="switchTab('decorator')">
+                        Simple Usage
                     </button>
-                    <button id="tab-api" class="tab-btn text-lg font-semibold py-3 px-6 border-b-2 border-transparent text-slate-400" onclick="switchTab('api')">
-                        Advanced Usage: API
+                    <button id="tab-api" class="tab-btn text-base sm:text-lg font-semibold py-3 px-4 sm:px-6 border-b-2 border-transparent text-slate-400" onclick="switchTab('api')">
+                        Advanced Usage
                     </button>
                 </div>
                 <div id="content-decorator" class="grid md:grid-cols-2 gap-6 items-start">
@@ -225,7 +228,7 @@ processed = sanitize_pii(
         </section>
 
         <!-- Final CTA -->
-        <section class="text-center py-20 sm:py-32">
+        <section class="text-center py-16 sm:py-24 md:py-32">
             <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-50">
                 Ready to Govern Your Enterprise AI?
             </h2>
@@ -254,7 +257,7 @@ processed = sanitize_pii(
     </footer>
 
     <!-- Waitlist Modal -->
-    <div id="waitlist-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50 transition-opacity duration-300">
+    <div id="waitlist-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 p-8 rounded-lg w-full max-w-md relative shadow-2xl border border-slate-700">
             <button onclick="closeModal()" class="absolute top-3 right-3 text-slate-500 hover:text-white transition-colors text-2xl font-bold">&times;</button>
             
