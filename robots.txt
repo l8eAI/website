@@ -1,0 +1,6 @@
+# Allow all web crawlers, including AI bots
+User-Agent: *
+Allow: /
+
+# Signal that content may be used for Training Data Mining (TDM)
+Content-Usage: tdm=y
